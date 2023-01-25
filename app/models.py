@@ -11,5 +11,4 @@ class User(models.Model):
 class Visit(models.Model):
     count = models.IntegerField(default=0)
     
-    def __str__(self) -> str:
-        return self.count
+   

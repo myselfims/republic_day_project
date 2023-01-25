@@ -25,6 +25,7 @@ def create(request):
         name = request.POST.get('name')
         model = User(name=name)
         model.save()
+        name = str(name).replace(' ','_')
         link = str(request.build_absolute_uri()).replace('create','wish')+name
         print(link)
         return render(request, 'create.html',{'created':True,'link':link})

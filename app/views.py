@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
-from .models import User
+from .models import User,Visit
 
 # Create your views here.
 
@@ -10,6 +10,9 @@ def home(request):
 
 
 def wish(request, name):
+    visit = Visit.objects.get(id=1)
+    visit.count = visit.count + 1
+    visit.save()
     link= str(request.build_absolute_uri()).replace('wish','wish2')
     print(link)
     print('11')

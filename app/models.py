@@ -7,3 +7,9 @@ class User(models.Model):
     
     def __str__(self):
         return self.name
+
+class Visit(models.Model):
+    count = models.IntegerField(default=0)
+    
+    def __str__(self) -> str:
+        return self.count

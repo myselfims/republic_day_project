@@ -11,4 +11,5 @@ class User(models.Model):
 class Visit(models.Model):
     count = models.IntegerField(default=0)
     
-   
+class Video(models.Model):
+    link = models.TextField()

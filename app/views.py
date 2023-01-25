@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
-from .models import User,Visit
+from .models import User,Visit,Video
 
 # Create your views here.
 
@@ -19,11 +19,12 @@ def wish(request, name):
     return render(request,'base.html',{'link':link})
 
 def wish2(request,name):
-    print(name)
-    return render(request,'wish.html',{'name':name})
+    video = Video.objects.get(id=1)
+    return render(request,'wish.html',{'name':name,'video':video})
 
 
 def create(request):
+    video = Video.objects.get(id=1)
     if request.method == 'POST':
         name = request.POST.get('name')
         model = User(name=name)
@@ -31,5 +32,5 @@ def create(request):
         name = str(name).replace(' ','_')
         link = str(request.build_absolute_uri()).replace('create','wish')+name
         print(link)
-        return render(request, 'create.html',{'created':True,'link':link})
-    return render(request,'create.html')
+        return render(request, 'create.html',{'created':True,'link':link,'video':video})
+    return render(request,'create.html',{'video':video})

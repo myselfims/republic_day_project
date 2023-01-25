@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block body %}
-<video src="{%static '/video/Republic day video 3.mp4' %}" autoplay loop ></video>
+<video src="{{video.link}}" autoplay loop ></video>
 {% if created %}
 
 <div class="shareicon-div">

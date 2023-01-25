@@ -65,7 +65,6 @@ video{
     /* justify-content: space-between;  */
     margin-top: 12rem;
     text-shadow: 3px 3px 3px  lime;
-    position: fixed;
 
 }
 
@@ -77,7 +76,6 @@ video{
     font-size: 2rem;
     animation: 3s linear 1s shine;
     padding: 1rem;
-    position: fixed;
 }
 .createlink-div{
     z-index: 4;
@@ -91,7 +89,7 @@ video{
     justify-content: center;
     align-items: flex-end;
     flex-direction: column;
-    position: fixed
+    position: inherit;
 }
 form{
     z-index: 3;

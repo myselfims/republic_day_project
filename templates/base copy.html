@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <title>Happy Republic Day - Shaikh Imran</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <img id="frame" class="frame" src="/static/photos/frame.png" alt="">
+            <video src="/static/video/Republic day video.mp4" autoplay loop ></video>
+            
+            <form action="{%url 'create' %}" method='post'>
+                <div class="create-div">
+
+                    <input class='inputbox' type="text">
+                    
+                    <button class="btn">Create</button>
+                </div>
+            </form>
+            <div class="shareicon-div">
+                <a target='_blank' href="https://wa.me/?text=Happy Republic Day, See this : {{link}}"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/768px-WhatsApp.svg.png" alt=""></a>
+                Share On Whatsapp
+            </div>
+        </div>
+    </main>
+</body>
+</html>

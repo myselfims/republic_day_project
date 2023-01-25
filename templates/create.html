@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<video src="{%static '/video/Republic day video 3.mp4' %}" autoplay loop ></video>
+{% if created %}
+
+<div class="shareicon-div">
+    <a target='_blank' href="https://wa.me/?text=Happy Republic Day, See this : {{link}}"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/768px-WhatsApp.svg.png" alt=""></a>
+    Share On Whatsapp
+</div>
+
+{% else %}
+
+<form action="{%url 'create' %}" method='post'>{% csrf_token %}
+    <div class="create-div">
+
+        <input name='name' class='inputbox' type="text">
+        
+        <button class="btn">Create</button>
+    </div>
+</form>
+
+{% endif %}
+
+{% endblock body %}

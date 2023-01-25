@@ -1,0 +1,25 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style/style.css">
+    <link rel="stylesheet" href="{%static 'style/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Oleo+Script+Swash+Caps:wght@700&display=swap" rel="stylesheet">
+    <title>Happy Republic Day - Shaikh Imran</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <img id="frame" class="frame" src="/static/photos/frame.png" alt="">
+            {% comment %} <video src="{%static '/video/Republic day video.mp4' %}" autoplay loop ></video> {% endcomment %}
+            {% block body %}
+            
+            <a href="{{link}}"><button class="btn">Open</button></a>
+            {% endblock body %}
+        </div>
+    </main>
+</body>
+</html>

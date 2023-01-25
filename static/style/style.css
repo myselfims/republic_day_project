@@ -1,0 +1,172 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Oleo Script Swash Caps', cursive;
+}
+.container{
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-size: 2em;
+    flex-direction: column;
+    /* z-index: 1; */
+}
+.container button{
+    font-size: 1.2em;
+    padding: 0.2em 1em;
+    z-index: 2;
+    
+    
+
+}
+a{
+    z-index: 4;
+}
+.btn{
+    background-image: linear-gradient(to top, lime,orange);
+    color: white;
+    border: 2px solid white ;
+    border-radius: 1em;
+    z-index: 3;
+}
+video{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    margin-bottom: 5rem;
+    /* filter: blur(15px); */
+
+}
+
+.frame{
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+    filter: sepia();
+    animation-name: shine;
+    animation: shine 1s linear infinite;
+}  
+
+.wish-div{
+    z-index: 2;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    font-size: 1rem;
+    font-weight: bold;
+    /* justify-content: space-between;  */
+    margin-top: 12rem;
+    text-shadow: 3px 3px 3px  lime;
+
+}
+
+.wish-div label{
+    margin: 4rem;
+    font-size: 2.2rem;
+}
+.wish-div h2{
+    font-size: 2rem;
+    animation: 3s linear 1s shine;
+    padding: 1rem;
+}
+.createlink-div{
+    z-index: 4;
+    margin-top: 37rem;
+    font-size: 1rem;
+}
+
+.create-div{
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+}
+form{
+    z-index: 3;
+}
+.inputbox {
+    z-index: 2;
+    margin: 1rem 0;
+    font-size: 1rem;
+    padding: 0.7rem;
+    background-color: white;
+    border: 2px solid rgba(0, 0, 0, 0.196);
+    border-radius: 0.2rem;
+}
+
+.shareicon-div{
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+.shareicon-div img{
+    width: 6rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes shine{
+    0%{
+        color: orange;
+    }
+    50%{
+        color: white;
+    }
+    100%{
+        color: lime;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes shine{
+    0%{
+        filter: brightness(50px);
+    }
+    100%{
+        filter: sepia();
+    }
+}
+

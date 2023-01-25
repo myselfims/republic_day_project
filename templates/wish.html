@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<video src="{%static '/video/Republic day video 3.mp4' %}" autoplay loop ></video>
+<div class="wish-div">
+    {% comment %} <h1>Happy Republic Day</h1> {% endcomment %}
+    {% comment %} <label for="">From</label> {% endcomment %}
+    <h2 class='btn'>{{name}}</h2>
+</div>
+<div class="createlink-div">
+    <a href="{%url 'create' %}"><button class='btn'>Create Your</button></a>
+</div>
+
+{% endblock body %}

@@ -18,7 +18,7 @@
     /* z-index: 1; */
 }
 .container button{
-    font-size: 1.2em;
+    font-size: 1em;
     padding: 0.2em 1em;
     z-index: 2;
     
@@ -50,9 +50,6 @@ video{
     z-index: 3;
     width: 100vw;
     height: 100vh;
-    filter: sepia();
-    animation-name: shine;
-    animation: shine 1s linear infinite;
 }  
 
 .wish-div {

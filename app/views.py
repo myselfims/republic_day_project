@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
+from .models import User
 
 # Create your views here.
 
@@ -22,6 +23,8 @@ def wish2(request,name):
 def create(request):
     if request.method == 'POST':
         name = request.POST.get('name')
+        model = User(name=name)
+        model.save()
         link = str(request.build_absolute_uri()).replace('create','wish')+name
         print(link)
         return render(request, 'create.html',{'created':True,'link':link})
